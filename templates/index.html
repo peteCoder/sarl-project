@@ -33,7 +33,6 @@
     </head>
 
     <body>
-        <!-- Footer -->
         {% include '_components/navbar.html' %}
 
 
@@ -106,7 +105,7 @@
         <div class="row g-5 align-items-center">
             <div class="col-lg-6 col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
                 <div class="about-img">
-                    <img src="{% static 'img/about-3.png' %}" class="img-fluid w-100 rounded-top bg-white" alt="Image">
+                    <img src="{% static 'img/about-3.jpg' %}" class="img-fluid w-100 rounded-top bg-white" alt="Image">
                     <img src="{% static 'img/about-2.jpg' %}" class="img-fluid w-100 rounded-bottom" alt="Image">
                 </div>
             </div>
@@ -124,21 +123,8 @@
                         <p class="text-dark mb-0"><i class="fas fa-check-circle text-primary me-1"></i> Unique Cultural Tours</p>
                     </div>
                 </div>
-                <div class="row g-4 justify-content-between mb-5">
-                    <div class="col-xl-5"><a href="{% url 'about' %}" class="btn btn-primary rounded-pill py-3 px-5">Discover More</a></div>
-                    <div class="col-xl-7 mb-5">
-                        <div class="about-customer d-flex position-relative">
-                            <img src="{% static 'img/customer-img-1.jpg' %}" class="img-fluid btn-lg-square position-absolute" style="left: 0; top: 0;" alt="Image">
-                            <img src="{% static 'img/customer-img-2.jpg' %}" class="img-fluid btn-lg-square position-absolute" style="left: 45px; top: 0;" alt="Image">
-                            <img src="{% static 'img/customer-img-3.jpg' %}" class="img-fluid btn-lg-square position-absolute" style="left: 90px; top: 0;" alt="Image">
-                            <img src="{% static 'img/customer-img-1.jpg' %}" class="img-fluid btn-lg-square position-absolute" style="left: 135px; top: 0;" alt="Image">
-                            <div class="position-absolute text-dark" style="left: 220px; top: 10px;">
-                                <p class="mb-0">5m+ Happy Travellers</p>
-                                <p class="mb-0">Around the Globe</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+                
                 <div class="row g-4 text-center align-items-center justify-content-center">
                     <div class="col-sm-4">
                         <div class="bg-primary rounded p-4">
@@ -162,7 +148,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-4"> 
                         <div class="bg-primary rounded p-4">
                             <div class="d-flex align-items-center justify-content-center">
                                 <span class="counter-value fs-1 fw-bold text-dark" data-toggle="counter-up">97</span>
@@ -183,11 +169,6 @@
 
         {% include '_components/services.html' %}
         {% include '_components/testimonials.html' %}
-
-        
-
-
-        
 
 
         <!-- FAQ Start -->
@@ -257,7 +238,6 @@
             <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
                 <div class="faq-img RotateMoveRight rounded">
                     <img src="{% static 'img/faq-img.jpg' %}" class="img-fluid rounded w-100" alt="Image">
-                    <a class="faq-btn btn btn-primary rounded-pill text-white py-3 px-5" href="{% url 'faqs' %}">Read More Q & A <i class="fas fa-arrow-right ms-2"></i></a>
                 </div>
             </div>
         </div>
