@@ -17,8 +17,7 @@ def contact(request):
 def faqs(request):
     return render(request, 'faqs.html', {})
 
-def not_found(request):
-    return render(request, 'not_found.html', {})
+
 
 def project(request):
     return render(request, 'project.html', {})
@@ -34,7 +33,6 @@ def team(request):
 
 def testimonial(request):
     return render(request, 'testimonial.html', {})
-
 
 
 
