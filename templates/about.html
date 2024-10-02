@@ -1,56 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-    {% load static %}
 
-    <head>
-        <meta charset="utf-8">
-        <title>Investa - Investment Website Template</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="" name="keywords">
-        <meta content="" name="description">
+{% extends '_base.html' %}
+{% load static %}
+    
 
-        <!-- Google Web Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
-
-        <!-- Icon Font Stylesheet -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-        <!-- Libraries Stylesheet -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-        <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
-        <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
-        <link href="{% static 'lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
+{% block content %}
 
 
-        <!-- Customized Bootstrap Stylesheet -->
-        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
 
-        <!-- Template Stylesheet -->
-        <link href="{% static 'css/style.css' %}" rel="stylesheet">
-    </head>
+<!-- Header Start -->
+<div class="container-fluid bg-breadcrumb">
+    <div class="bg-breadcrumb-single"></div>
+    <div class="container text-center py-5" style="max-width: 900px;">
+        <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">About Us</h4>
+        <ol class="breadcrumb justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+            <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+            <li class="breadcrumb-item active text-primary">About</li>
+        </ol>    
+    </div>
+</div>
+<!-- Header End -->
 
-    <body>
-
-        {% include '_components/navbar.html' %}
-
-
-        <!-- Header Start -->
-        <div class="container-fluid bg-breadcrumb">
-            <div class="bg-breadcrumb-single"></div>
-            <div class="container text-center py-5" style="max-width: 900px;">
-                <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">About Us</h4>
-                <ol class="breadcrumb justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
-                    <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
-                    <li class="breadcrumb-item active text-primary">About</li>
-                </ol>    
-            </div>
-        </div>
-        <!-- Header End -->
-
-               <!-- About Start -->
+<!-- About Start -->
 <div class="container-fluid about bg-light py-5">
     <div class="container py-5">
         <div class="row g-5 align-items-center">
@@ -119,9 +89,9 @@
 
 {% include '_components/services.html' %}
 
-       
-         
-        <!-- Continent Visited Start -->
+    
+        
+    <!-- Continent Visited Start -->
 <div class="container-fluid continent-visited py-5">
     <div class="container">
         <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
@@ -161,91 +131,76 @@
 <!-- Continent Visited End -->
 
 
-        <!-- Countries Visited -->
-        <div class="container-fluid blog pb-5">
-            <div class="container pb-5">
-                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
-                    <h4 class="text-primary">Countries We Have Visited</h4>
-                    <h1 class="display-4">Discover the Beauty of Europe Through Our Travels</h1>
+    <!-- Countries Visited -->
+    <div class="container-fluid blog pb-5">
+        <div class="container pb-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                <h4 class="text-primary">Countries We Have Visited</h4>
+                <h1 class="display-4">Discover the Beauty of Europe Through Our Travels</h1>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="blog-item bg-light rounded p-4">
+                        <div class="mb-4">
+                            <h4 class="text-primary mb-2">France</h4>
+                        
+                        </div>
+                        <div class="project-img">
+                            <img src="{% static 'img/blog-1.jpg' %}" class="img-fluid w-100 rounded" alt="Image">
+                            <div class="blog-plus-icon">
+                                <a href="{% static 'img/blog-1.jpg' %}" data-lightbox="blog-1" class="btn btn-primary btn-md-square rounded-pill"><i class="fas fa-plus fa-1x"></i></a>
+                            </div>
+                        </div>
+                        <div class="my-4">
+                            <a href="#" class="h4">Experience the Charm of Paris and the French Riviera</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="row g-4 justify-content-center">
-                    <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="blog-item bg-light rounded p-4">
-                            <div class="mb-4">
-                                <h4 class="text-primary mb-2">France</h4>
+                <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="blog-item bg-light rounded p-4" style="background-image: url(img/bg.png)">
+                        <div class="mb-4">
+                            <h4 class="text-primary mb-2">Italy</h4>
                             
-                            </div>
-                            <div class="project-img">
-                                <img src="{% static 'img/blog-1.jpg' %}" class="img-fluid w-100 rounded" alt="Image">
-                                <div class="blog-plus-icon">
-                                    <a href="{% static 'img/blog-1.jpg' %}" data-lightbox="blog-1" class="btn btn-primary btn-md-square rounded-pill"><i class="fas fa-plus fa-1x"></i></a>
-                                </div>
-                            </div>
-                            <div class="my-4">
-                                <a href="#" class="h4">Experience the Charm of Paris and the French Riviera</a>
+                        </div>
+                        <div class="project-img">
+                            <img src="{% static 'img/blog-2.jpg' %}" class="img-fluid w-100 rounded" alt="Image">
+                            <div class="blog-plus-icon">
+                                <a href="{% static 'img/blog-2.jpg' %}" data-lightbox="blog-2" class="btn btn-primary btn-md-square rounded-pill"><i class="fas fa-plus fa-1x"></i></a>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="blog-item bg-light rounded p-4" style="background-image: url(img/bg.png)">
-                            <div class="mb-4">
-                                <h4 class="text-primary mb-2">Italy</h4>
-                                
-                            </div>
-                            <div class="project-img">
-                                <img src="{% static 'img/blog-2.jpg' %}" class="img-fluid w-100 rounded" alt="Image">
-                                <div class="blog-plus-icon">
-                                    <a href="{% static 'img/blog-2.jpg' %}" data-lightbox="blog-2" class="btn btn-primary btn-md-square rounded-pill"><i class="fas fa-plus fa-1x"></i></a>
-                                </div>
-                            </div>
-                            <div class="my-4">
-                                <a href="#" class="h4">Explore the Rich History and Cuisine of Rome and Venice</a>
-                            </div>
+                        <div class="my-4">
+                            <a href="#" class="h4">Explore the Rich History and Cuisine of Rome and Venice</a>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="blog-item bg-light rounded p-4" style="background-image: url(img/bg.png);">
-                            <div class="mb-4">
-                                <h4 class="text-primary mb-2">Spain</h4>
-                                
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="blog-item bg-light rounded p-4" style="background-image: url(img/bg.png);">
+                        <div class="mb-4">
+                            <h4 class="text-primary mb-2">Spain</h4>
+                            
+                        </div>
+                        <div class="project-img">
+                            <img src="{% static 'img/blog-3.jpg' %}" class="img-fluid w-100 rounded" alt="Image">
+                            <div class="blog-plus-icon">
+                                <a href="{% static 'img/blog-3.jpg' %}" data-lightbox="blog-3" class="btn btn-primary btn-md-square rounded-pill"><i class="fas fa-plus fa-1x"></i></a>
                             </div>
-                            <div class="project-img">
-                                <img src="{% static 'img/blog-3.jpg' %}" class="img-fluid w-100 rounded" alt="Image">
-                                <div class="blog-plus-icon">
-                                    <a href="{% static 'img/blog-3.jpg' %}" data-lightbox="blog-3" class="btn btn-primary btn-md-square rounded-pill"><i class="fas fa-plus fa-1x"></i></a>
-                                </div>
-                            </div>
-                            <div class="my-4">
-                                <a href="#" class="h4">Discover the Vibrant Culture and Beautiful Landscapes of Barcelona and Madrid</a>
-                            </div>
+                        </div>
+                        <div class="my-4">
+                            <a href="#" class="h4">Discover the Vibrant Culture and Beautiful Landscapes of Barcelona and Madrid</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Countries Visited -->
+    </div>
+    <!-- Countries Visited -->
 
 
 
-        <!-- Team Section -->
+    <!-- Team Section -->
 
-        {% include '_components/teams.html' %}  
-        {% include '_components/footer.html' %}  
+    {% include '_components/teams.html' %}  
+    {% include '_components/footer.html' %}  
 
-        
-    <!-- JavaScript Libraries -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="{% static 'lib/wow/wow.min.js' %}"></script>
-    <script src="{% static 'lib/easing/easing.min.js' %}"></script>
-    <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
-    <script src="{% static 'lib/counterup/counterup.min.js' %}"></script>
-    <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
-    <script src="{% static 'lib/lightbox/js/lightbox.min.js' %}"></script>
     
-
-    <!-- Template Javascript -->
-    <script src="{% static 'js/main.js' %}"></script>
-    </body>
-
-</html>
+{% endblock %}
