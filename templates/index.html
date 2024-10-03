@@ -67,71 +67,7 @@
 
 
 <!-- About Start -->
-<div class="container-fluid about bg-light py-5">
-    <div class="container py-5">
-        <div class="row g-5 align-items-center">
-            <div class="col-lg-6 col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
-                <div class="about-img">
-                    <img src="{% static 'img/about-3.jpg' %}" class="img-fluid w-100 rounded-top bg-white" alt="Image">
-                    <img src="{% static 'img/about-2.jpg' %}" class="img-fluid w-100 rounded-bottom" alt="Image">
-                </div>
-            </div>
-            <div class="col-lg-6 col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-                <h4 class="text-primary">About Us</h4>
-                <h1 class="display-5 mb-4">Experience the World with SALR: Smiling Traveling Agency</h1>
-                <p class="text ps-4 mb-4">At SALR, we are committed to transforming your travel dreams into reality. With a passion for exploration and a dedication to exceptional service, we offer tailored travel experiences across Europe and Africa, providing everything from secure transport and visa assistance to luxurious tours of iconic destinations.</p>
-                <div class="row g-4 justify-content-between mb-5">
-                    <div class="col-lg-6 col-xl-5">
-                        <p class="text-dark"><i class="fas fa-check-circle text-primary me-1"></i> Personalized Travel Assistance</p>
-                        <p class="text-dark mb-0"><i class="fas fa-check-circle text-primary me-1"></i> Safe and Secure Transportation</p>
-                    </div>
-                    <div class="col-lg-6 col-xl-7">
-                        <p class="text-dark"><i class="fas fa-check-circle text-primary me-1"></i> Air Ticket Sales and Booking</p>
-                        <p class="text-dark mb-0"><i class="fas fa-check-circle text-primary me-1"></i> Unique Cultural Tours</p>
-                    </div>
-                </div>
-
-                
-                <div class="row g-4 text-center align-items-center justify-content-center">
-                    <div class="col-sm-4">
-                        <div class="bg-primary rounded p-4">
-                            <div class="d-flex align-items-center justify-content-center">
-                                <span class="counter-value fs-1 fw-bold text-dark" data-toggle="counter-up">32</span>
-                                <h4 class="text-dark fs-1 mb-0" style="font-weight: 600; font-size: 25px;">k+</h4>
-                            </div>
-                            <div class="w-100 d-flex align-items-center justify-content-center">
-                                <p class="text-white mb-0">Tours Completed</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="bg-dark rounded p-4">
-                            <div class="d-flex align-items-center justify-content-center">
-                                <span class="counter-value fs-1 fw-bold text-white" data-toggle="counter-up">21</span>
-                                <h4 class="text-white fs-1 mb-0" style="font-weight: 600; font-size: 25px;">+</h4>
-                            </div>
-                            <div class="w-100 d-flex align-items-center justify-content-center">
-                                <p class="mb-0">Years Of Expertise</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4"> 
-                        <div class="bg-primary rounded p-4">
-                            <div class="d-flex align-items-center justify-content-center">
-                                <span class="counter-value fs-1 fw-bold text-dark" data-toggle="counter-up">97</span>
-                                <h4 class="text-dark fs-1 mb-0" style="font-weight: 600; font-size: 25px;">+</h4>
-                            </div>
-                            <div class="w-100 d-flex align-items-center justify-content-center">
-                                <p class="text-white mb-0">Travel Experts</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- About End -->
+{% include '_components/about.html' %}
 
 
 {% include '_components/services.html' %}
@@ -212,6 +148,6 @@
 </div>
 <!-- FAQ End -->
 
-<div id="google_translate_element"></div>
+
 
 {% endblock %}

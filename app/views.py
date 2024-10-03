@@ -34,5 +34,8 @@ def team(request):
 def testimonial(request):
     return render(request, 'testimonial.html', {})
 
+def destinations(request):
+    return render(request, 'destinations.html', {})
+
 
 

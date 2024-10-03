@@ -1,0 +1,147 @@
+{% extends '_base.html' %}
+{% load static %}
+    
+
+{% block content %}
+<div class="my-5">
+  <h1 class="text-center mb-4 display-4">Explore Destinations</h1>
+
+  <div class="container mt-5">
+    <div class="container mt-5">
+      <div class="filter-form p-4 bg-light rounded shadow-sm">
+        <form method="GET" action="">
+          <div class="row">
+            <!-- Destination Field -->
+            <div class="form-group col-lg-3 col-md-6 mb-3">
+              <label for="destination">Destination</label>
+              <select id="destination" name="destination" class="form-control">
+                <option value="" selected>Select destination...</option>
+                <option value="paris">Paris</option>
+                <option value="london">London</option>
+                <option value="new_york">New York</option>
+                <option value="tokyo">Tokyo</option>
+                <!-- Add more destinations -->
+              </select>
+            </div>
+    
+            <!-- Date Field -->
+            <div class="form-group col-lg-3 col-md-6 mb-3">
+              <label for="date">Departure Date</label>
+              <input type="date" id="date" name="date" class="form-control">
+            </div>
+    
+            <!-- Budget Range -->
+            <div class="form-group col-lg-3 col-md-6 mb-3">
+              <label for="budget">Budget</label>
+              <select id="budget" name="budget" class="form-control">
+                <option value="" selected>Select budget...</option>
+                <option value="low">$ - Low</option>
+                <option value="medium">$$ - Medium</option>
+                <option value="high">$$$ - High</option>
+              </select>
+            </div>
+    
+            <!-- Duration Field -->
+            <div class="form-group col-lg-3 col-md-6 mb-3">
+              <label for="duration">Duration (days)</label>
+              <input type="number" min="1" id="duration" name="duration" class="form-control" placeholder="Days">
+            </div>
+    
+            <!-- Activities Field -->
+            <div class="form-group col-lg-3 col-md-6 mb-3">
+              <label for="activities">Activities</label>
+              <select id="activities" name="activities" class="form-control">
+                <option value="" selected>Select...</option>
+                <option value="adventure">Adventure</option>
+                <option value="relaxation">Relaxation</option>
+                <option value="culture">Cultural</option>
+                <option value="nature">Nature & Wildlife</option>
+              </select>
+            </div>
+          </div>
+    
+          <!-- Submit Button -->
+          <div class="row justify-content-center w-100">
+            <div class="form-group col-lg-3 col-md-4">
+              <button type="submit" class="btn btn-primary btn-block ">Search</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="container my-5">
+        
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          <!-- Card 1 -->
+          <div class="col">
+            <div class="card h-100">
+              <div class="project-img position-relative">
+                <img src="{% static 'img/blog-3.jpg' %}" class="img-fluid w-100 rounded" alt="Image">
+                <div class="blog-plus-icon position-absolute" style="transform: translate(-50%, -50%); left: 50%; top: 50%;">
+                    <a href="{% static 'img/blog-3.jpg' %}" data-lightbox="blog-1" class="btn btn-primary btn-md-square rounded-pill"><i class="fas fa-plus fa-1x"></i></a>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">France</h5>
+                <p class="card-text">Experience the romantic charm of Paris and the scenic beauty of the French countryside.</p>
+                <ul class="list-unstyled mb-3">
+                  <li class="mb-1"><strong>Trip Duration:</strong> 7 days</li>
+                  <li class="mb-1"><strong>Travel Fee:</strong> $1200</li>
+                  <li class="mb-1"><strong>Other Details:</strong> Includes flight, hotel, and city tours.</li>
+                </ul>
+                <a href="#" class="btn btn-primary">Book Now</a>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Card 2 -->
+          <div class="col">
+            <div class="card h-100">
+              <div class="project-img position-relative">
+                <img src="{% static 'img/blog-1.jpg' %}" class="img-fluid w-100 rounded" alt="Image">
+                <div class="blog-plus-icon position-absolute" style="transform: translate(-50%, -50%); left: 50%; top: 50%;">
+                    <a href="{% static 'img/blog-1.jpg' %}" data-lightbox="blog-2" class="btn btn-primary btn-md-square rounded-pill"><i class="fas fa-plus fa-1x"></i></a>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Japan</h5>
+                <p class="card-text">Discover the perfect blend of tradition and modernity in the Land of the Rising Sun.</p>
+                <ul class="list-unstyled mb-3">
+                  <li class="mb-1"><strong>Trip Duration:</strong> 10 days</li>
+                  <li class="mb-1"><strong>Travel Fee:</strong> $1500</li>
+                  <li class="mb-1"><strong>Other Details:</strong> Includes flight, hotel, and guided city tours.</li>
+                </ul>
+                <a href="#" class="btn btn-primary">Book Now</a>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Card 3 -->
+          <div class="col">
+            <div class="card h-100">
+              <div class="project-img position-relative">
+                <img src="{% static 'img/blog-2.jpg' %}" class="img-fluid w-100 rounded" alt="Image">
+                <div class="blog-plus-icon position-absolute" style="transform: translate(-50%, -50%); left: 50%; top: 50%;">
+                    <a href="{% static 'img/blog-2.jpg' %}" data-lightbox="blog-3" class="btn btn-primary btn-md-square rounded-pill"><i class="fas fa-plus fa-1x"></i></a>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Australia</h5>
+                <p class="card-text">Enjoy the stunning beaches, vibrant cities, and the Great Barrier Reef in Australia.</p>
+                <ul class="list-unstyled mb-3">
+                  <li class="mb-1"><strong>Trip Duration:</strong> 14 days</li>
+                  <li class="mb-1"><strong>Travel Fee:</strong> $1800</li>
+                  <li class="mb-1"><strong>Other Details:</strong> Includes flight, hotel, and adventure activities.</li>
+                </ul>
+                <a href="#" class="btn btn-primary">Book Now</a>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Add more cards as needed -->
+        </div>
+      </div>
+
+</div>
+{% endblock %}

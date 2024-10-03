@@ -21,186 +21,20 @@
 <!-- Header End -->
 
 <!-- About Start -->
-<div class="container-fluid about bg-light py-5">
-    <div class="container py-5">
-        <div class="row g-5 align-items-center">
-            <div class="col-lg-6 col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
-                <div class="about-img">
-                    <img src="{% static 'img/about-3.jpg' %}" class="img-fluid w-100 rounded-top bg-white" alt="Image">
-                    <img src="{% static 'img/about-2.jpg' %}" class="img-fluid w-100 rounded-bottom" alt="Image">
-                </div>
-            </div>
-            <div class="col-lg-6 col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-                <h4 class="text-primary">About Us</h4>
-                <h1 class="display-5 mb-4">Experience the World with SALR: Smiling Traveling Agency</h1>
-                <p class="text ps-4 mb-4">At SALR, we are committed to transforming your travel dreams into reality. With a passion for exploration and a dedication to exceptional service, we offer tailored travel experiences across Europe and Africa, providing everything from secure transport and visa assistance to luxurious tours of iconic destinations.</p>
-                <div class="row g-4 justify-content-between mb-5">
-                    <div class="col-lg-6 col-xl-5">
-                        <p class="text-dark"><i class="fas fa-check-circle text-primary me-1"></i> Personalized Travel Assistance</p>
-                        <p class="text-dark mb-0"><i class="fas fa-check-circle text-primary me-1"></i> Safe and Secure Transportation</p>
-                    </div>
-                    <div class="col-lg-6 col-xl-7">
-                        <p class="text-dark"><i class="fas fa-check-circle text-primary me-1"></i> Air Ticket Sales and Booking</p>
-                        <p class="text-dark mb-0"><i class="fas fa-check-circle text-primary me-1"></i> Unique Cultural Tours</p>
-                    </div>
-                </div>
+{% include '_components/about.html' %}
 
-                
-                <div class="row g-4 text-center align-items-center justify-content-center">
-                    <div class="col-sm-4">
-                        <div class="bg-primary rounded p-4">
-                            <div class="d-flex align-items-center justify-content-center">
-                                <span class="counter-value fs-1 fw-bold text-dark" data-toggle="counter-up">32</span>
-                                <h4 class="text-dark fs-1 mb-0" style="font-weight: 600; font-size: 25px;">k+</h4>
-                            </div>
-                            <div class="w-100 d-flex align-items-center justify-content-center">
-                                <p class="text-white mb-0">Tours Completed</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="bg-dark rounded p-4">
-                            <div class="d-flex align-items-center justify-content-center">
-                                <span class="counter-value fs-1 fw-bold text-white" data-toggle="counter-up">21</span>
-                                <h4 class="text-white fs-1 mb-0" style="font-weight: 600; font-size: 25px;">+</h4>
-                            </div>
-                            <div class="w-100 d-flex align-items-center justify-content-center">
-                                <p class="mb-0">Years Of Expertise</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4"> 
-                        <div class="bg-primary rounded p-4">
-                            <div class="d-flex align-items-center justify-content-center">
-                                <span class="counter-value fs-1 fw-bold text-dark" data-toggle="counter-up">97</span>
-                                <h4 class="text-dark fs-1 mb-0" style="font-weight: 600; font-size: 25px;">+</h4>
-                            </div>
-                            <div class="w-100 d-flex align-items-center justify-content-center">
-                                <p class="text-white mb-0">Travel Experts</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- About End -->
 
 {% include '_components/services.html' %}
 
     
         
-    <!-- Continent Visited Start -->
-<div class="container-fluid continent-visited py-5">
-    <div class="container">
-        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
-            <h4 class="text-primary">Continents We Explore</h4>
-            <h1 class="display-4">Discover the Wonders of Africa and Europe</h1>
-        </div>
-        <div class="project-carousel owl-carousel wow fadeInUp" data-wow-delay="0.1s">
-            <div class="project-item h-100 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="project-img">
-                    <img src="{% static 'img/projects-1.jpg' %}" class="img-fluid w-100 rounded" alt="Image">
-                </div>
-                <div class="project-content bg-light rounded p-4">
-                    <div class="project-content-inner">
-                        <div class="project-icon mb-3"><i class="fas fa-globe-africa fa-4x text-primary"></i></div>
-                        <p class="text-dark fs-5 mb-3">Explore Africa</p>
-                        <p class="h4">Immerse Yourself in the Diverse Cultures and Stunning Landscapes of Africa</p>
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="project-item h-100 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="project-img">
-                    <img src="{% static 'img/projects-1.jpg' %}" class="img-fluid w-100 rounded" alt="Image">
-                </div>
-                <div class="project-content bg-light rounded p-4">
-                    <div class="project-content-inner">
-                        <div class="project-icon mb-3"><i class="fas fa-globe-europe fa-4x text-primary"></i></div>
-                        <p class="text-dark fs-5 mb-3">Explore Europe</p>
-                        <p class="h4 cursor-default">Experience the Rich History and Vibrant Cultures of Europe</p>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Continent Visited End -->
-
-
-    <!-- Countries Visited -->
-    <div class="container-fluid blog pb-5">
-        <div class="container pb-5">
-            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
-                <h4 class="text-primary">Countries We Have Visited</h4>
-                <h1 class="display-4">Discover the Beauty of Europe Through Our Travels</h1>
-            </div>
-            <div class="row g-4 justify-content-center">
-                <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="blog-item bg-light rounded p-4">
-                        <div class="mb-4">
-                            <h4 class="text-primary mb-2">France</h4>
-                        
-                        </div>
-                        <div class="project-img">
-                            <img src="{% static 'img/blog-1.jpg' %}" class="img-fluid w-100 rounded" alt="Image">
-                            <div class="blog-plus-icon">
-                                <a href="{% static 'img/blog-1.jpg' %}" data-lightbox="blog-1" class="btn btn-primary btn-md-square rounded-pill"><i class="fas fa-plus fa-1x"></i></a>
-                            </div>
-                        </div>
-                        <div class="my-4">
-                            <a href="#" class="h4">Experience the Charm of Paris and the French Riviera</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="blog-item bg-light rounded p-4" style="background-image: url(img/bg.png)">
-                        <div class="mb-4">
-                            <h4 class="text-primary mb-2">Italy</h4>
-                            
-                        </div>
-                        <div class="project-img">
-                            <img src="{% static 'img/blog-2.jpg' %}" class="img-fluid w-100 rounded" alt="Image">
-                            <div class="blog-plus-icon">
-                                <a href="{% static 'img/blog-2.jpg' %}" data-lightbox="blog-2" class="btn btn-primary btn-md-square rounded-pill"><i class="fas fa-plus fa-1x"></i></a>
-                            </div>
-                        </div>
-                        <div class="my-4">
-                            <a href="#" class="h4">Explore the Rich History and Cuisine of Rome and Venice</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="blog-item bg-light rounded p-4" style="background-image: url(img/bg.png);">
-                        <div class="mb-4">
-                            <h4 class="text-primary mb-2">Spain</h4>
-                            
-                        </div>
-                        <div class="project-img">
-                            <img src="{% static 'img/blog-3.jpg' %}" class="img-fluid w-100 rounded" alt="Image">
-                            <div class="blog-plus-icon">
-                                <a href="{% static 'img/blog-3.jpg' %}" data-lightbox="blog-3" class="btn btn-primary btn-md-square rounded-pill"><i class="fas fa-plus fa-1x"></i></a>
-                            </div>
-                        </div>
-                        <div class="my-4">
-                            <a href="#" class="h4">Discover the Vibrant Culture and Beautiful Landscapes of Barcelona and Madrid</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Countries Visited -->
+    
 
 
 
     <!-- Team Section -->
 
     {% include '_components/teams.html' %}  
-    {% include '_components/footer.html' %}  
 
     
 {% endblock %}

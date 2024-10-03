@@ -36,8 +36,29 @@
     <!-- Template Stylesheet -->
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
 
+
+
     {% block title %}
     {% endblock %}
+
+    <style>
+        .filter-form {
+            background-color: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .filter-form label {
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .btn-block {
+            width: 100%;
+        }
+      </style>
 
     <style>
         .goog-te-banner-frame {
@@ -49,7 +70,7 @@
         }
 
         #google_translate_element select {
-            width: 200px;
+            width: 140px;
             padding: 5px;
             border: 1px solid black !important;
             outline: none !important;
@@ -79,6 +100,7 @@
     <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
     <script src="{% static 'lib/lightbox/js/lightbox.min.js' %}"></script>
 
+    
     <script type="text/javascript">
         function googleTranslateElementInit() {
           new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
@@ -90,5 +112,36 @@
 
     <!-- Template Javascript -->
     <script src="{% static 'js/main.js' %}"></script>
+
+    <script>
+        window.onload = function () {
+            const els = document.getElementsByClassName("nav-item");
+            const pathname = location.pathname;
+
+            const makeNavItemActive = function () {
+                console.log(pathname) // i.e. /about/
+                if (pathname === "/") {
+                    for (let i = 0; i < els.length; i++) {
+                        els[i].classList.remove("active");
+                    }
+                    els[0].classList.add("active");
+                    return
+                } else {
+                    const nameOfPath = pathname.split("/")[1];
+                    for (let i = 0; i < els.length; i++) {
+                        if (els[i].id.startsWith(nameOfPath)) {
+                            els[i].classList.add("active");
+                        } else {
+                            els[i].classList.remove("active");
+                        }
+                    }
+                }
+            }
+
+            makeNavItemActive();
+    
+        }
+        
+    </script>
 </body>
 </html>
