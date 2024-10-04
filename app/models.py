@@ -28,8 +28,8 @@ class Team(models.Model):
     twitter_url = models.URLField()
 
     class Meta:
-        verbose_name = "Team"
-        verbose_name_plural = "Teams"
+        verbose_name = "Team Member"
+        verbose_name_plural = "Team"
 
     def __str__(self) -> str:
         return self.staff_name
